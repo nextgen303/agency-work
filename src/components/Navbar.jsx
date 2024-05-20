@@ -20,9 +20,9 @@ const Navbar = () => {
 
     // Show navlinks
     timeline.fromTo(
-      navlinksRef.current,
+      navlinksRef.current.children,
       { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 0.8 }
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.1 }
     );
 
     // Show button
@@ -33,11 +33,21 @@ const Navbar = () => {
     );
   }, []);
 
+  const handleLinkHover = (event) => {
+    const link = event.target;
+    gsap.to(link, { scale: 1.2, duration: 0.3 });
+  };
+
+  const handleLinkLeave = (event) => {
+    const link = event.target;
+    gsap.to(link, { scale: 1, duration: 0.3 });
+  };
+
   return (
     <div className="max-w-screen-xl mx-auto p-3 flex items-center justify-between">
       <div className="flex items-center justify-center">
         <div className="logo">
-            <Logo />
+            <Logo ref={logoRef} />
         </div>
 
         <div className="navlinks flex gap-12 ml-20" ref={navlinksRef}>
@@ -49,6 +59,8 @@ const Navbar = () => {
                 key={index}
                 className="text-sm flex items-center gap-1"
                 href="#"
+                onMouseEnter={handleLinkHover}
+                onMouseLeave={handleLinkLeave}
               >
                 {index === 1 && (
                   <span
@@ -64,7 +76,7 @@ const Navbar = () => {
       </div>
 
       <div ref={buttonRef}>
-        <Button />
+        <Button onMouseEnter={handleLinkHover} onMouseLeave={handleLinkLeave} />
       </div>
     </div>
   );

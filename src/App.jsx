@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Preloader from "./components/Preloader";
+import CustomCursor from "./components/CustomCursor"; // Import the custom cursor component
 import { gsap } from "gsap";
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
           opacity: 0,
           duration: 0.6,
           ease: "circ.inOut",
-          x: -1000
+          x: -1000,
         })
         .to(mainContentRef.current, {
           opacity: 1,
@@ -30,6 +31,9 @@ const App = () => {
 
   return (
     <div className="relative w-full h-screen bg-zinc-900 text-white overflow-y-hidden">
+      {/* Add the custom cursor component */}
+      <CustomCursor />
+
       {loading && (
         <div className="preloader bg-black fixed inset-0 flex items-center justify-center">
           <Preloader />
@@ -41,7 +45,6 @@ const App = () => {
         style={{ opacity: 0 }}
       >
         <Navbar />
-
       </div>
     </div>
   );
