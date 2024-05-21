@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Button from "./Button";
-import Logo from "./Logo.";
+import Logo from "./Logo";
 import { gsap } from "gsap";
 
 const Navbar = () => {
@@ -15,21 +15,21 @@ const Navbar = () => {
     timeline.fromTo(
       logoRef.current,
       { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 0.8 }
+      { opacity: 1, y: 0, duration: 2.0 }
     );
 
     // Show navlinks
     timeline.fromTo(
       navlinksRef.current.children,
       { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 0.8, stagger: 0.1 }
+      { opacity: 1, y: 0, duration: 2.0, stagger: 0.1 }
     );
 
     // Show button
     timeline.fromTo(
       buttonRef.current,
       { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 0.8 }
+      { opacity: 1, y: 0, duration: 1.0 }
     );
   }, []);
 
@@ -44,7 +44,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto p-3 flex items-center justify-between">
+    <div className="max-w-screen-xl mx-auto pb-4 pt-3 flex items-center justify-between border-zinc-700 border-b-[1px]">
       <div className="flex items-center justify-center">
         <div className="logo">
             <Logo ref={logoRef} />

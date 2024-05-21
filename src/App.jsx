@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Preloader from "./components/Preloader";
-import CustomCursor from "./components/CustomCursor"; // Import the custom cursor component
 import { gsap } from "gsap";
+import Work from "./components/Work";
+import Stripes from "./components/Stripes";
+import Products from "./components/Products";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -10,7 +12,6 @@ const App = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      // Transition from preloader to main content
       const timeline = gsap.timeline({
         onComplete: () => setLoading(false),
       });
@@ -26,14 +27,11 @@ const App = () => {
           opacity: 1,
           duration: 1.3,
         });
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-zinc-900 text-white overflow-y-hidden">
-      {/* Add the custom cursor component */}
-      <CustomCursor />
-
+    <div className="relative w-full h-screen bg-zinc-900 text-white overflow-x-hidden">
       {loading && (
         <div className="preloader bg-black fixed inset-0 flex items-center justify-center">
           <Preloader />
@@ -45,6 +43,9 @@ const App = () => {
         style={{ opacity: 0 }}
       >
         <Navbar />
+        <Work />
+        <Stripes />
+        <Products />
       </div>
     </div>
   );
