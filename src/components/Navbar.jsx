@@ -15,14 +15,14 @@ const Navbar = () => {
     timeline.fromTo(
       logoRef.current,
       { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 2.0 }
+      { opacity: 1, y: 0, duration: 1.0 }
     );
 
     // Show navlinks
     timeline.fromTo(
       navlinksRef.current.children,
       { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 2.0, stagger: 0.1 }
+      { opacity: 1, y: 0, duration: 1.0, stagger: 0.1 }
     );
 
     // Show button
