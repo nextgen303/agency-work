@@ -8,10 +8,10 @@ function Product({ val }) {
         <h1 className="text-6xl capitalize">{val.title}</h1>
         <div className="dets w-1/3">
           <p className="mb-10">{val.description}</p>
-          <dib className="flex items-center gap-5">
+          <div className="flex items-center gap-5">
             {val.live && <Button />}
             {val.case && <Button title="Github" />}
-          </dib>
+          </div>
         </div>
       </div>
     </div>

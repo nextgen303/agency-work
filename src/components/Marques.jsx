@@ -33,8 +33,8 @@ function Marques() {
 
   return (
     <div className="py-10 pt-24">
-      {images.map(item => 
-        <Marque imagesurl={item} />
+      {images.map((item, index) => 
+        <Marque key={index} imagesurl={item} />
       )}
     </div>
   );

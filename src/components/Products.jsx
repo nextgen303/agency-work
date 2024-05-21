@@ -50,7 +50,7 @@ const Products = () => {
 
   return (
     <div className='pt-24'>
-        {products.map((val, index) => <Product val={val} />)}
+        {products.map((val, index) => <Product  key={index} val={val} />)}
     </div>
   )
 }
