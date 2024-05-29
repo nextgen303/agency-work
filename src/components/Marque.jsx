@@ -3,7 +3,7 @@ import React from "react";
 
 function Marque({ imagesurl, diraction }) {
   return (
-    <div className="flex w-full py-7 overflow-hidden">
+    <div className="flex w-full py-7">
       <motion.div
         initial={{ x: diraction === "left" ? "0" : "-100%" }}
         animate={{x: diraction === "left" ? "-100%" : "0"}}

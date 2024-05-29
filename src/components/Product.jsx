@@ -3,7 +3,9 @@ import Button from "./Button";
 
 function Product({ val, mover, count, hoverColor }) {
   return (
-    <div className={`w-full py-20 h-[23rem] text-white transition duration-700 ${hoverColor}`}>
+    <div
+      className={`w-full py-20 h-[23rem] text-white transition duration-700 ${hoverColor}`}
+    >
       <div
         onMouseEnter={() => {
           mover(count);

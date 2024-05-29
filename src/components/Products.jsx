@@ -50,11 +50,11 @@ function Products() {
 
   const hoverColors = [
     "hover:bg-zinc-800",
-    "hover:bg-blue-500",
-    "hover:bg-green-500",
-    "hover:bg-yellow-500",
-    "hover:bg-purple-500",
-    "hover:bg-pink-500",
+    "hover:bg-[#122533]",
+    "hover:bg-[#161825]",
+    "hover:bg-[#0D1720]",
+    "hover:bg-[#86C8D4]",
+    "hover:bg-[#02956D]",
   ];
 
   const images = [

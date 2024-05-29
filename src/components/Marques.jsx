@@ -32,7 +32,7 @@ function Marques() {
   ];
 
   return (
-    <div className="py-20 mt-32 w-full relative overflow-hidden">
+    <div className="py-20 mt-32 w-full relative">
       {images.map((item, index) => (
         <Marque
           key={index}

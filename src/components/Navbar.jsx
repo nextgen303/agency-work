@@ -10,7 +10,7 @@ const Navbar = () => {
           <Logo />
         </div>
 
-        <div className="navlinks flex gap-12 ml-20">
+        <div className="navlinks md:flex gap-12 ml-20 hidden">
           {["Home", "Work", "Culture", "", "News"].map((elem, index) =>
             elem.length === 0 ? (
               <span key={index} className="w-[2px] h-7 bg-zinc-600"></span>
