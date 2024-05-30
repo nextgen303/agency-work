@@ -22,7 +22,7 @@ const Card = () => {
 
       <div className="cardright flex flex-col justify-between w-2/3 bg-zinc-800 p-5 rounded-lg h-[400px] hover:bg-[#ff8839b1]  hover:p-6 transition-all">
         <div className="top">
-        <div className="mb-3 flex items-center justify-between">
+          <div className="mb-3 flex items-center justify-between">
             <h5 className=" text-sm text-zinc-300">Up next : News</h5>
 
             <FaArrowRightLong className="text-zinc-400" />

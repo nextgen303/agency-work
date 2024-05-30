@@ -51,7 +51,7 @@ const App = () => {
         </div>
       )}
       <div
-        className="main-content w-full h-full"
+        className="main-content w-full h-full px-5"
         ref={mainContentRef}
         style={{ opacity: 0 }}
       >

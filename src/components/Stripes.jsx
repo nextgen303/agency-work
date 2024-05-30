@@ -104,7 +104,7 @@ const Stripes = () => {
   ];
 
   return (
-    <div className="mt-24 mb-32 overflow-hidden">
+    <div className="mt-24 mb-32">
       <Striperun items={data} direction="left" />
     </div>
   );
